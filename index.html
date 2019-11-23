@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  
+  <title>Happy Birthday</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      cursor: url(https://i.ibb.co/mz9rDX4/star.png), auto;
+    }
+
+    body {
+      max-width: 100%;
+      min-width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+
+    .let-it-snow {
+      background: linear-gradient(-45deg, #E4AA99, #E594B3, #53B3D6, #67DABF, #E594B3, #E4AA99, #67DABF, #53B3D6);
+      animation: gradientBG 8s ease infinite;
+      width: 400%;
+      height: 400%;
+      background-size: cover;
+      background-repeat: repeat;
+      background-attachment: fixed;
+      background-size: 300% 300%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .box {
+      top: 280px;
+      width: 200px;
+      height: 200px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      position: absolute;
+      margin-left: 6%;
+      margin-right: 30%;
+      -webkit-transform-style: preserve-3d;
+      -webkit-transform: rotateX(13deg);
+      -webkit-animation: move 5s linear infinite;
+    }
+
+    .minbox {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: 50px;
+      top: 30px;
+      -webkit-transform-style: preserve-3d;
+    }
+
+    .minbox li {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .minbox li:nth-child(1) {
+      background: url(https://s3-ap-southeast-1.amazonaws.com/tmp-ap-southeast-1.transloadit.com/1cb4c0ef5a4f41ad92ea361afce264e9.jpg) no-repeat 0 0;
+      -webkit-transform: translateZ(50px);
+    }
+
+    .minbox li:nth-child(2) {
+      background: url(https://s3-ap-southeast-1.amazonaws.com/tmp-ap-southeast-1.transloadit.com/1cb4c0ef5a4f41ad92ea361afce264e9.jpg) no-repeat 0 0;
+      -webkit-transform: rotateX(180deg) translateZ(50px);
+    }
+
+    .minbox li:nth-child(3) {
+      background: url(https://s3-ap-southeast-1.amazonaws.com/tmp-ap-southeast-1.transloadit.com/1cb4c0ef5a4f41ad92ea361afce264e9.jpg) no-repeat 0 0;
+      -webkit-transform: rotateX(-90deg) translateZ(50px);
+    }
+/* https://s3-ap-southeast-1.amazonaws.com/tmp-ap-southeast-1.transloadit.com/1cb4c0ef5a4f41ad92ea361afce264e9.jpg */
+/* https://s3-ap-southeast-1.amazonaws.com/tmp-ap-southeast-1.transloadit.com/8a204893e4204fd99860231e9418dabb.jpg */
+/* https://scontent-hkg3-2.xx.fbcdn.net/v/t1.0-9/p960x960/51795574_2320118598217643_9032945041059872768_o.jpg?_nc_cat=104&_nc_ohc=ILexujN_qMIAQmdj7A_bOFurPkM95QQWt6-bm2OMM6n1seK9mzHQ1StIw&_nc_ht=scontent-hkg3-2.xx&oh=1f8eac3a077f40a9afe82fd68d467b22&oe=5E81B2F5 */
+/* https://scontent.fsgn5-2.fna.fbcdn.net/v/t1.0-1/p960x960/67138147_2429238827305619_8393145401019990016_o.jpg?_nc_cat=105&_nc_ohc=xEx4JVWgPlwAQkXyZaPo3Rzf3TTfmdxnUuui_zBvTOgDz64unrPRzXDKQ&_nc_ht=scontent.fsgn5-2.fna&oh=1dbf1c72bb9f456789fd1932849c00ad&oe=5E3EBD33 */
+    .minbox li:nth-child(4) {
+      background: url(https://s3-ap-southeast-1.amazonaws.com/tmp-ap-southeast-1.transloadit.com/1cb4c0ef5a4f41ad92ea361afce264e9.jpg) no-repeat 0 0;
+      -webkit-transform: rotateX(90deg) translateZ(50px);
+    }
+
+    .minbox li:nth-child(5) {
+      background: url(https://s3-ap-southeast-1.amazonaws.com/tmp-ap-southeast-1.transloadit.com/1cb4c0ef5a4f41ad92ea361afce264e9.jpg) no-repeat 0 0;
+      -webkit-transform: rotateY(-90deg) translateZ(50px);
+    }
+
+    .minbox li:nth-child(6) {
+      background: url(https://s3-ap-southeast-1.amazonaws.com/tmp-ap-southeast-1.transloadit.com/1cb4c0ef5a4f41ad92ea361afce264e9.jpg) no-repeat 0 0;
+      -webkit-transform: rotateY(90deg) translateZ(50px);
+    }
+
+    .maxbox li:nth-child(1) {
+      background: url("./image/67138147_2429238827305619_8393145401019990016_o (1).jpg") no-repeat 0 0;
+      -webkit-transform: translateZ(50px);
+    }
+
+    .maxbox li:nth-child(2) {
+      background: url("./image/67138147_2429238827305619_8393145401019990016_o (1).jpg") no-repeat 0 0;
+      -webkit-transform: rotateX(180deg) translateZ(50px);
+    }
+
+    .maxbox li:nth-child(3) {
+      background: url("./image/67138147_2429238827305619_8393145401019990016_o (1).jpg") no-repeat 0 0;
+      -webkit-transform: rotateX(-90deg) translateZ(50px);
+    }
+
+    .maxbox li:nth-child(4) {
+      background: url("./image/67138147_2429238827305619_8393145401019990016_o (1).jpg") no-repeat 0 0;
+      -webkit-transform: rotateX(90deg) translateZ(50px);
+    }
+
+    .maxbox li:nth-child(5) {
+      background: url("./image/67138147_2429238827305619_8393145401019990016_o (1).jpg") no-repeat 0 0;
+      -webkit-transform: rotateX(-90deg) translateZ(50px);
+    }
+
+    .maxbox li:nth-child(6) {
+      background: url("./image/67138147_2429238827305619_8393145401019990016_o (1).jpg") no-repeat 0 0;
+      -webkit-transform: rotateX(90deg) translateZ(50px);
+    }
+
+    .maxbox {
+      width: 800px;
+      height: 400px;
+      position: absolute;
+      left: 0;
+      top: -20px;
+      -webkit-transform-style: preserve-3d;
+    }
+
+    .maxbox li {
+      width: 200px;
+      height: 200px;
+      background: #fff;
+      border: 1px solid #ccc;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0.3;
+      -webkit-transition: all 1.2s ease;
+    }
+
+    .maxbox li:nth-child(1) {
+      -webkit-transform: translateZ(100px);
+    }
+
+    .maxbox li:nth-child(2) {
+      -webkit-transform: rotateX(180deg) translateZ(100px);
+    }
+
+    .maxbox li:nth-child(3) {
+      -webkit-transform: rotateX(-90deg) translateZ(100px);
+    }
+
+    .maxbox li:nth-child(4) {
+      -webkit-transform: rotateX(90deg) translateZ(100px);
+    }
+
+    .maxbox li:nth-child(5) {
+      -webkit-transform: rotateY(-90deg) translateZ(100px);
+    }
+
+    .maxbox li:nth-child(6) {
+      -webkit-transform: rotateY(90deg) translateZ(100px);
+    }
+
+    .box:hover ol li:nth-child(1) {
+      -webkit-transform: translateZ(300px);
+      width: 400px;
+      height: 400px;
+      opacity: 0.8;
+      left: -100px;
+      top: -100px;
+    }
+
+    .box:hover ol li:nth-child(2) {
+      -webkit-transform: rotateX(180deg) translateZ(300px);
+      width: 400px;
+      height: 400px;
+      opacity: 0.8;
+      left: -100px;
+      top: -100px;
+    }
+
+    .box:hover ol li:nth-child(3) {
+      -webkit-transform: rotateX(-90deg) translateZ(300px);
+      width: 400px;
+      height: 400px;
+      opacity: 0.8;
+      left: -100px;
+      top: -100px;
+    }
+
+    .box:hover ol li:nth-child(4) {
+      -webkit-transform: rotateX(90deg) translateZ(300px);
+      width: 400px;
+      height: 400px;
+      opacity: 0.8;
+      left: -100px;
+      top: -100px;
+    }
+
+    .box:hover ol li:nth-child(5) {
+      -webkit-transform: rotateY(-90deg) translateZ(300px);
+      width: 400px;
+      height: 400px;
+      opacity: 0.8;
+      left: -100px;
+      top: -100px;
+    }
+
+    .box:hover ol li:nth-child(6) {
+      -webkit-transform: rotateY(90deg) translateZ(300px);
+      width: 400px;
+      height: 400px;
+      opacity: 0.8;
+      left: -100px;
+      top: -100px;
+    }
+
+    @keyframes move {
+      0% {
+        -webkit-transform: rotateX(13deg) rotateY(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotateX(13deg) rotateY(360deg);
+      }
+    }
+  </style>
+  <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
+  <script>
+    window.console = window.console || function(t) {};
+  </script>
+  <script>
+    if (document.location.search.match(/type=embed/gi)) {
+      window.parent.postMessage("resize", "*");
+    }
+  </script>
+</head>
+
+<body translate="no">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title></title>
+  <link href="https://www.jqueryscript.net/demo/Simple-Falling-Snow-Effect-with-jQuery-CSS3-let-it-snow/let-it-snow.css" rel="stylesheet" type="text/css">
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://www.jqueryscript.net/demo/Simple-Falling-Snow-Effect-with-jQuery-CSS3-let-it-snow/let-it-snow.min.js"></script>
+
+
+  <div class="let-it-snow"><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span
+      class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span
+      class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span
+      class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span
+      class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span
+      class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span
+      class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span
+      class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span
+      class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span
+      class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span
+      class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span
+      class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span
+      class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span
+      class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span
+      class="lis-flake"></span><span class="lis-flake"></span>
+    <div class="box">
+      <ul class="minbox">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <ol class="maxbox">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+    </div>
+    <span class="lis-flake--js" style="left: 54%; top: -220px; width: 5px; height: 4px; margin-top: 468.753px;"></span><span class="lis-flake--js" style="left: 52%; top: -990px; width: 4px; height: 1px; margin-top: 468.753px;"></span><span
+      class="lis-flake--js" style="left: 32%; top: -30px; width: 3px; height: 2px; margin-top: 468.753px;"></span><span class="lis-flake--js" style="left: 26%; top: -680px; width: 1px; height: 1px; margin-top: 468.753px;"></span><span
+      class="lis-flake--js" style="left: 20%; top: -490px; width: 1px; height: 5px; margin-top: 468.753px;"></span><span class="lis-flake--js" style="left: 35%; top: -950px; width: 4px; height: 3px; margin-top: 468.753px;"></span><span
+      class="lis-flake--js" style="left: 39%; top: -750px; width: 2px; height: 5px; margin-top: 468.753px;"></span><span class="lis-flake--js" style="left: 72%; top: -630px; width: 1px; height: 2px; margin-top: 468.753px;"></span><span
+      class="lis-flake--js" style="left: 13%; top: -850px; width: 2px; height: 3px; margin-top: 468.753px;"></span><span class="lis-flake--js" style="left: 27%; top: -810px; width: 3px; height: 4px; margin-top: 468.753px;"></span><span
+      class="lis-flake--js" style="left: 98%; top: -390px; width: 0px; height: 3px; margin-top: 468.753px;"></span><span class="lis-flake--js" style="left: 77%; top: -490px; width: 2px; height: 4px; margin-top: 468.753px;"></span><span
+      class="lis-flake--js" style="left: 94%; top: -40px; width: 5px; height: 4px; margin-top: 468.753px;"></span><span class="lis-flake--js" style="left: 75%; top: -450px; width: 0px; height: 1px; margin-top: 468.753px;"></span><span
+      class="lis-flake--js" style="left: 66%; top: -520px; width: 3px; height: 1px; margin-top: 468.753px;"></span><span class="lis-flake--js" style="left: 54%; top: -760px; width: 1px; height: 2px; margin-top: 468.753px;"></span><span
+      class="lis-flake--js" style="left: 8%; top: -160px; width: 3px; height: 4px;"></span><span class="lis-flake--js" style="left: 34%; top: -240px; width: 3px; height: 3px;"></span><span class="lis-flake--js"
+      style="left: 78%; top: -660px; width: 4px; height: 2px;"></span><span class="lis-flake--js" style="left: 3%; top: -60px; width: 5px; height: 4px;"></span><span class="lis-flake--js"
+      style="left: 82%; top: -70px; width: 5px; height: 5px;"></span><span class="lis-flake--js" style="left: 35%; top: -350px; width: 3px; height: 2px;"></span><span class="lis-flake--js"
+      style="left: 14%; top: -130px; width: 3px; height: 5px;"></span><span class="lis-flake--js" style="left: 82%; top: -140px; width: 0px; height: 0px;"></span><span class="lis-flake--js"
+      style="left: 61%; top: -870px; width: 4px; height: 5px;"></span><span class="lis-flake--js" style="left: 98%; top: -850px; width: 4px; height: 4px;"></span><span class="lis-flake--js"
+      style="left: 88%; top: -330px; width: 4px; height: 4px;"></span><span class="lis-flake--js" style="left: 39%; top: -180px; width: 2px; height: 3px;"></span><span class="lis-flake--js"
+      style="left: 61%; top: -890px; width: 2px; height: 1px;"></span><span class="lis-flake--js" style="left: 28%; top: -740px; width: 2px; height: 0px;"></span><span class="lis-flake--js"
+      style="left: 66%; top: -440px; width: 5px; height: 4px;"></span><span class="lis-flake--js" style="left: 25%; top: -990px; width: 4px; height: 3px;"></span><span class="lis-flake--js"
+      style="left: 12%; top: -970px; width: 0px; height: 5px;"></span><span class="lis-flake--js" style="left: 2%; top: -510px; width: 1px; height: 4px;"></span><span class="lis-flake--js"
+      style="left: 52%; top: -40px; width: 3px; height: 2px;"></span><span class="lis-flake--js" style="left: 34%; top: -410px; width: 3px; height: 5px;"></span><span class="lis-flake--js"
+      style="left: 99%; top: -580px; width: 4px; height: 3px;"></span><span class="lis-flake--js" style="left: 48%; top: -190px; width: 1px; height: 5px;"></span><span class="lis-flake--js"
+      style="left: 80%; top: -170px; width: 5px; height: 4px;"></span><span class="lis-flake--js" style="left: 57%; top: -360px; width: 0px; height: 2px;"></span><span class="lis-flake--js"
+      style="left: 36%; top: -960px; width: 2px; height: 4px;"></span><span class="lis-flake--js" style="left: 80%; top: -380px; width: 0px; height: 1px;"></span><span class="lis-flake--js"
+      style="left: 26%; top: -640px; width: 2px; height: 3px;"></span><span class="lis-flake--js" style="left: 78%; top: -30px; width: 0px; height: 2px;"></span><span class="lis-flake--js"
+      style="left: 50%; top: -610px; width: 0px; height: 0px;"></span><span class="lis-flake--js" style="left: 54%; top: -470px; width: 0px; height: 4px;"></span><span class="lis-flake--js"
+      style="left: 97%; top: -730px; width: 1px; height: 3px;"></span><span class="lis-flake--js" style="left: 50%; top: -580px; width: 2px; height: 3px;"></span><span class="lis-flake--js"
+      style="left: 52%; top: -960px; width: 1px; height: 0px;"></span><span class="lis-flake--js" style="left: 95%; top: -840px; width: 4px; height: 4px;"></span>
+  </div>
+
+
+  <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
+  <script id="rendered-js">
+    $.letItSnow('.let-it-snow', {
+      stickyFlakes: 'lis-flake--js',
+      makeFlakes: true,
+      sticky: true
+    });
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+    //# sourceURL=pen.js
+  </script>
+
+
+</body>
+
+</html>
